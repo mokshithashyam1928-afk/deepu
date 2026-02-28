@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Cake Surprise 🎂</title>
+    <link rel="stylesheet" href="css/common-style.css">
+    <link rel="stylesheet" href="css/final-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="final-page">
+    <style>
+        body.final-page {
+            background: url('https://i.pinimg.com/1200x/1d/b9/cb/1db9cba3c5662f47b0ad0ba64937acaf.jpg') center center/cover no-repeat fixed;
+        }
+    </style>
+    <!-- Animated background -->
+    <div class="bg-gradient"></div>
+    
+    <!-- Floating hearts -->
+    <div class="particles-container">
+        <div class="particle heart">💕</div>
+        <div class="particle heart">💖</div>
+        <div class="particle heart">💗</div>
+        <div class="particle heart">✨</div>
+        <div class="particle heart">🌸</div>
+        <div class="particle heart">💓</div>
+        <div class="particle heart">💝</div>
+        <div class="particle heart">💞</div>
+        <div class="particle heart">🎀</div>
+        <div class="particle heart">🌹</div>
+    </div>
+
+    <!-- Confetti container -->
+    <div id="confettiContainer"></div>
+
+    <div class="page-container">
+        <div class="final-content">
+            <h1 class="final-title" style="color:#000; margin-top: 80px;">It's Your Special Day! 🎉</h1>
+            <p class="final-subtitle" style="color:#000; margin-top: 32px;">Click the cake to blow out the candles...</p>
+
+            <!-- Animated Cake -->
+            <div class="cake-container">
+                <div class="cake cake-photo" id="cakeElement">
+                    <img class="cake-image" src="https://i.pinimg.com/1200x/4e/7d/39/4e7d390a83d209c102187d58e97f3c26.jpg" alt="Birthday cake">
+                    <div class="candle candle-number candle-2">
+                        <span class="candle-digit">0</span>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle candle-number candle-0">
+                        <span class="candle-digit">2</span>
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message hidden" id="finalMessage">
+                <div class="message-box">
+                    <h2>Happy Birthday My Bestie! 💖</h2>
+                    <p>I hope this year brings you endless joy, laughter, and magical moments.</p>
+                    <p>You mean the world to me, and I'm grateful for every moment we share.</p>
+                    <p class="signature">With all my love,<br>Your Friend Forever 💕</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

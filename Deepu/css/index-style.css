@@ -1,0 +1,86 @@
+/* ====================================
+   INDEX PAGE STYLES - LANDING PAGE
+   Hero, Typing Animation, CTA Button
+   ==================================== */
+
+/* ===== INDEX PAGE BACKGROUND ===== */
+.index-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.landing-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    color: #111;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 3px 12px rgba(255, 255, 255, 0.45);
+}
+
+.typing {
+    display: inline-block;
+}
+
+.hero-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    color: #111;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(217, 70, 166, 0.2);
+    border: 2px solid #d946a6;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.cta-button:hover {
+    background: #ffc0e0;
+    color: #111;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(217, 70, 166, 0.4);
+}
+
+.button-text { }
+.button-icon { font-size: 1.3rem; }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+    .landing-container {
+        padding: 1rem;
+    }
+
+    .hero-title {
+        line-height: 1.2;
+    }
+}

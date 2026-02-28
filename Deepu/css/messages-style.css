@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Comfortaa:wght@400;600&family=Fredoka:wght@400;500&family=Indie+Flower&family=Pacifico&family=Playfair+Display:wght@400;500&family=Poppins:wght@400;500&family=Sacramento&display=swap');
+
+/* ===== MESSAGES PAGE ===== */
+.messages-page {
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.messages-page .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 1rem;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1rem 0;
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.carousel-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #93c5fd, #60a5fa);
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(147, 197, 253, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(147, 197, 253, 0.55);
+    background: linear-gradient(135deg, #60a5fa, #93c5fd);
+}
+
+.carousel-btn:active {
+    transform: scale(1.05);
+}
+
+.carousel-btn-prev, .carousel-btn-next {
+    position: relative;
+    z-index: 20;
+}
+
+.messages-carousel {
+    width: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2rem 1rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 15px 50px rgba(147, 197, 253, 0.25);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 0;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    padding: 0;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.message-card {
+    background: url('https://i.pinimg.com/1200x/66/81/50/668150be77306056d91ff6ffa2aee180.jpg') center/cover no-repeat;
+    border: 2px solid rgba(217, 70, 166, 0.3);
+    border-radius: 25px;
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(217, 70, 166, 0.2);
+    transition: all 0.4s ease;
+    animation: slideUp 0.6s ease-out;
+    min-width: 500px;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(217, 70, 166, 0.3);
+    border-color: rgba(217, 70, 166, 0.5);
+}
+
+.carousel-progress {
+    height: 5px;
+    background: linear-gradient(90deg, #bfdbfe 0%, #93c5fd 50%, #60a5fa 100%);
+    border-radius: 3px;
+    margin-top: 2.5rem;
+    animation: slideUp 0.8s ease-out;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(147, 197, 253, 0.4);
+}
+
+.envelope-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: floatUp 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(217, 70, 166, 0.2));
+}
+
+.message-header h3 {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+.friend-name {
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.open-message-btn {
+    padding: 1rem 2rem;
+    border: 2px solid #d946a6;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffd6e8, #fff9e6);
+    color: #d946a6;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(217, 70, 166, 0.2);
+}
+
+.open-message-btn:hover {
+    background: linear-gradient(135deg, #d946a6, #9333ea);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(217, 70, 166, 0.4);
+}
+
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+    backdrop-filter: blur(3px);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.modal-content.hima-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
+    url('https://i.pinimg.com/1200x/b0/a8/e8/b0a8e82333bfb5984b32c426bbb16291.jpg') center/cover no-repeat;
+}
+
+.modal-content.toshitha-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/736x/ed/5f/10/ed5f103e1c6ae1b5eb32a6b15721d4d6.jpg') center/cover no-repeat;
+}
+
+.modal-content.thanusha-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/736x/d1/92/8b/d1928bdac10c3a5a567e1972b42cc06c.jpg') center/cover no-repeat;
+}
+
+.modal-content.buttu-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/736x/26/ba/8e/26ba8e3a903e2bf5307e5bafdaf36a9b.jpg') center/cover no-repeat;
+}
+
+.modal-content.veekshitha-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/736x/3c/e6/0d/3ce60d8e70ed14538cdf7acf3d1eb08e.jpg') center/cover no-repeat;
+}
+
+.modal-content.bhaavya-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/736x/a9/23/a4/a923a493e0f6b6a1392373c9dc5628b7.jpg') center/cover no-repeat;
+}
+
+.modal-content.mithula-sanju-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/1200x/bc/1a/37/bc1a37f24bfeeb5167c47b08bfdd3b48.jpg') center/cover no-repeat;
+}
+
+.modal-content.deepika-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/736x/9e/d4/a7/9ed4a747361bf9cce542bf450d4f50f0.jpg') center/cover no-repeat;
+}
+
+.modal-content.sai-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/originals/c2/f4/5a/c2f45a5ea40b66547ddcbda91021b53c.png') center/cover no-repeat;
+}
+
+.modal-content.mokshitha-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('https://i.pinimg.com/originals/39/88/e9/3988e93fcead9eec9f7190043ef2bcb7.png') center/cover no-repeat;
+}
+
+.modal-content.hima-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.toshitha-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.thanusha-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.buttu-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.veekshitha-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.bhaavya-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.mithula-sanju-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.deepika-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.sai-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.mokshitha-bg .modal-header h2 {
+    color: #000;
+}
+
+.modal-content.hima-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.toshitha-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.thanusha-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.buttu-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.veekshitha-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.bhaavya-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.mithula-sanju-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.deepika-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.sai-bg .modal-close {
+    color: #000;
+}
+
+.modal-content.mokshitha-bg .modal-close {
+    color: #000;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #111;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-header h2 {
+    color: #d946a6;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    box-shadow: 0 10px 30px rgba(217, 70, 166, 0.25);
+    animation: slideUp 0.4s ease-out;
+    flex-shrink: 0;
+}
+
+.modal-body {
+    color: #111;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+#modalMessage.friend-font-1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+#modalMessage.friend-font-2 {
+    font-family: 'Great Vibes', cursive;
+}
+
+#modalMessage.friend-font-3 {
+    font-family: 'Caveat', cursive;
+}
+
+#modalMessage.friend-font-4 {
+    font-family: 'Indie Flower', cursive;
+}
+
+#modalMessage.friend-font-5 {
+    font-family: 'Pacifico', cursive;
+}
+
+#modalMessage.friend-font-6 {
+    font-family: 'Sacramento', cursive;
+}
+
+#modalMessage.friend-font-7 {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+#modalMessage.friend-font-8 {
+    font-family: 'Dancing Script', cursive;
+}
+
+#modalMessage.friend-font-9 {
+    font-family: 'Playfair Display', serif;
+}
+
+#modalMessage.friend-font-10 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.modal-button {
+    width: auto;
+    min-width: 270px;
+    padding: 1.1rem 2.6rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffe3f1, #f1dcff);
+    color: #7a1f5a;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    align-self: center;
+}
+
+.modal-button:hover {
+    background: linear-gradient(135deg, #ffd2ea, #e7c6ff);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(217, 70, 166, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .messages-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .message-card {
+        min-width: calc(100vw - 60px);
+        padding: 2rem 1rem;
+    }
+}

@@ -1,0 +1,121 @@
+/* ====================================
+   UNLOCK PAGE STYLES
+   Password Form, Lock Icon, Validation
+   ==================================== */
+
+/* ===== UNLOCK PAGE BACKGROUND ===== */
+.unlock-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.unlock-background .page-container {
+    margin: 0 auto;
+}
+
+.unlock-box {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)), url('https://i.pinimg.com/736x/0d/34/ba/0d34baac2a48a52832ed60e85e79d38e.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.6s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+.lock-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+.unlock-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.unlock-subtitle {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.unlock-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.unlock-input {
+    padding: 1rem;
+    border: 2px solid #ffc0cb;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.unlock-input:focus {
+    outline: none;
+    border-color: #d946a6;
+    box-shadow: 0 0 15px rgba(217, 70, 166, 0.3);
+    background: white;
+}
+
+.unlock-button {
+    padding: 1rem;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #d946a6, #9333ea);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(217, 70, 166, 0.3);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.unlock-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(217, 70, 166, 0.5);
+}
+
+.unlock-button:active {
+    transform: translateY(0);
+}
+
+.error-message {
+    color: #1a1a1a;
+    font-weight: 600;
+    min-height: 1.5rem;
+    animation: shake 0.5s;
+}
+
+.hint-text {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .unlock-box {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .unlock-box {
+        padding: 1.5rem 1rem;
+    }
+}
